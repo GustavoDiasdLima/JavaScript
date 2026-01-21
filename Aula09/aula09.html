@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body onload="alert('terminou de carregar')"> <!--Quando a página for pesada - mostra o alerta-->
+    <!--onmousedown="alert('clicou na tela')" mostra alerta clicou na tela-->
+    <!--onmouseup="alert('clicou na tela')" mostra o alerta quando soltar  mouse-->
+    <h1>Aprendendo Javascript</h1>
+    <h2>Eventos Javascript</h2>
+    <p id="texto"></p>
+
+    <button onclick="eventoClick()">Clique aqui</button><br> <!--Muda a cor do background-->
+    <button ondblclick="eventoDblClick()">Clique aqui</button> <!--dá um alert-->
+
+    <select onchange="mudou()" id="itens"> <!--no console.log aparece "mudou" ao  mudar de valor-->
+        <option value="1">Valor 1</option>
+        <option value="2">Valor 2</option>
+        <option value="3">Valor 3</option>
+        <option value="4">Valor 4</option>
+    </select>
+    <br><br>
+    <div id="teste" onmousemove="adicionaTexto()" onmouseout="viraAzul()" onmouseover="viraVermelho()" style="margin:auto auto;width:80%; height: 200px; background:blue;"></div>
+    <!--Quando o  mouse passar por cima vai ficar vermelho, volta ao normal anzul e depois adiciona texto-->
+
+    <input onfocus="limpaTexto()" id="campoTexto" style="padding: 80px; font-size: 40px; "type="text" placeholder="Digite alguma coisa" value="Já vem com texto">
+    <!--quando clicar no campo vai limpar o texto-->
+    <input onchange="mudou()" id="campoTexto" style="padding: 80px; font-size: 40px; "type="text" placeholder="Digite alguma coisa" value="Já vem com texto">
+    <!--quando digitar novo texto aparece no console.log mudou-->
+    <input onfocus="eventoClick()" id="campoTexto" style="padding: 80px; font-size: 40px; "type="text" placeholder="Digite alguma coisa" value="Já vem com texto">
+    <!--quando focar e desfocar no campo muda o background color-->
+
+    <input onkeypress="teclaPressionada()" id="campoTexto" style="padding: 80px; font-size: 40px; "type="text" placeholder="Digite alguma coisa" value="">
+    <!--aparece teclas no console.log-->
+    
+     <input onkeyup="teclaPressionada()" id="campoTexto" style="padding: 80px; font-size: 40px; "type="text" placeholder="Digite alguma coisa" value="">
+
+    <script src="aula09.js"></script>
+</body>
+</html>
