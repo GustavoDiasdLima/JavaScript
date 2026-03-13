@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de tempo</title>
+    <style>
+        .start{
+            padding: 70px;
+            font-size: 20px;
+            color: white;
+            background-color: green;
+        }
+        .start:hover{
+            background-color: darkgreen;
+            font-size: 25px;
+            color: rgb(0, 255, 149);
+        }
+        .stop{
+            padding: 70px;
+            font-size: 20px;
+            color: white;
+            background-color: orangered;
+        }
+        .stop:hover{
+            background-color: rgb(190, 92, 0);
+            font-size: 25px;
+            color: rgb(255, 217, 46);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Controle de Tempo</h1>
+    <h2 id="tempo">0</h2>
+    <button onclick="ativarContagem()" class="start">Ativar Contagem</button>
+    <button onclick="pararContagem()" class="stop">Parar Contagem</button>
+
+    <script src="aula13.js"></script>
+</body>
+</html>
